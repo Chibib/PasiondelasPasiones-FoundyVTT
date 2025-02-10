@@ -50,7 +50,7 @@ Si vous avez des questions, n'hésitez pas à me contacter
 - Compendium de toutes les manoeuvres
 - Création de personnage détailllée
 - Les objets peuvent être glissés et déposés depuis les journaux
-- La Rosa Querida et El sabor del Amour
+- La Rosa Querida et El sabor del Amor
 
 
 ## Prérequis
