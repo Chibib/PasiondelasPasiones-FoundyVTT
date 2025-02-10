@@ -6,6 +6,8 @@ Vous pouvez acheter Pasión de las Pasiones ici : https://khelren.itch.io/pasion
 
 **Importer uniquement les journaux**
 
+![image](https://github.com/user-attachments/assets/c89ef8bf-b21e-4b11-869a-091f2409627f)
+
 Pour créer une fiche de personnage, on choisit *Personnage*
 
 ![image](https://github.com/user-attachments/assets/17bd85e4-5446-4697-a6d2-fbb6e8387ef4)
