@@ -1,0 +1,590 @@
+/* variables */
+
+
+:root
+{
+	--color-text-light-highlight:white;
+	--color-border-highlight: #170000;
+--color-border-highlight-alt: ##170000;    
+    --stats-color : black; 
+    --red-color : #9B0A06; 
+    --blue-color :  #267bf1;
+    --input-background-color : white;
+	--color-text-light-7: white;
+	
+}
+
+@font-face {
+    font-family: playball-regular;
+    src: url('fonts/playball-regular-webfont.woff2') format('woff2'),
+         url('fonts/playball-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: delius-regular;
+    src: url('fonts/delius-regular-webfont.woff2') format('woff2'),
+         url('fonts/delius-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: permanentmarker;
+    src: url('fonts/permanentmarker-regular-webfont.woff2') format('woff2'),
+         url('fonts/permanentmarker-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+a[href] {
+    color: darkorchid;
+}
+* {
+scrollbar-color:black transparent;
+scrollbar-width:thin
+}
+#logo {
+background:none!important;
+height:auto;
+padding-right:10px;
+width: 200px;
+content:url("images/logo.webp");
+}
+#pause {
+background:none;
+font-family:playball-regular;
+font-size:30px;
+top:60%
+}
+
+#pause > figcaption {
+color:black;
+position:relative;
+text-shadow:1px 1px 2px darkblue, 0 0 1em darkorchid, 0 0 0.2em darkorchid;
+}
+
+#pause > img {
+background:none!important;
+content:url("images/pause.webp");
+height:150px;
+width:150px;
+}
+
+/* Main window style */
+#controls ol.control-tools > li.active, #controls ol.control-tools > li:hover {
+    box-shadow: 0 0 10px darkorchid;
+}
+#navigation #scene-list .scene.view, #navigation #scene-list .scene.context {
+   box-shadow: 0 0 10px darkorchid;
+}
+#sidebar-tabs {
+    --sidebar-tab-height: 32px;
+    --sidebar-tab-width: 24px;
+    flex: 0 0 var(--sidebar-tab-height);
+    box-sizing: border-box;
+    margin: 0 0 5px;
+    border-bottom: 2px darkorchid;
+    box-shadow: 0 0 10px darkorchid;
+    font-size: 14px;
+}
+#sidebar-tabs > .item.active {
+    color: white;
+    border: 1px solid darkorchid;
+    border-bottom: none;
+    box-shadow: 0 0 6px inset darkorchid;
+}
+#ui-top.offset {
+margin-left:5px
+}
+.window-app .window-content > * {
+     font-family: delius-regular;
+    font-size: 15px;
+}
+
+.vtt .window-app .dialog-buttons .dialog-button, .vtt .window-app .dialog-button{
+      background: white;
+	  color: black;	
+	  font-family: delius-regular;
+	  font-size : 15px;
+	  border-width: 5px;
+  border-style: solid;
+  border-image: linear-gradient(to right, darkblue, darkorchid) 1;
+  }
+  
+
+.vtt .window-header {
+    color: white;
+    font-family: playball-regular;
+background-color: #170000;
+font-size : 20px;
+}
+
+.vtt .window-app .window-header .window-title {
+	font-size : 25px;
+	}
+
+.chat-message .message-content {
+  font-family: delius-regular;
+  line-height: 20px;
+  }
+.vtt #chat-log .message .message-sender {
+    font-family: delius-regular;
+	}
+.vtt #chat-log .cell__title {
+color: #170000;
+font-family: playball-regular;
+}
+.vtt #chat-log .message .item-icon {
+background-color:transparent
+}
+
+.vtt #chat-log .message .failure {
+color: black;
+  border-width: 4px;
+  border-style: solid;
+border-image: linear-gradient(to right, darkblue, darkorchid) 1;
+border-radius:5px
+}
+
+.vtt #chat-log .message .partial {
+color: white;
+background-image: linear-gradient(to right, #9932cc, #7b24bc, #5d16ac, #3b099b, #00008b);1;
+border-radius:5px
+}
+
+.vtt #chat-log .message .success {
+color: white;
+  border-width: 4px;
+  border-style: solid;
+  border-image: linear-gradient(to right, darkblue, darkorchid) 1;
+box-shadow: -4px 5px 10px 1px rgba(0,0,139,0.9), 0px 0px 7px 3px rgba(153,50,204,0.9);
+background-image: linear-gradient(to right, #9932cc, #7b24bc, #5d16ac, #3b099b, #00008b);1;
+border-radius:5px
+}
+
+.vtt #chat-log .message .result-details, .vtt #chat-log .message .result-choices {
+position:relative;
+top:-10px
+}
+
+.vtt #chat-log .message .result-label {
+background: none;
+border: none
+}
+
+.vtt #chat-log .message.whisper {
+background:white
+}
+.vtt #chat-log h1, .vtt #chat-log h2, .vtt #chat-log h3, .vtt #chat-log h4, .vtt #chat-log h5 {
+    font-family: delius-regular;
+  }	
+.tag {
+	visibility: hidden;
+}	
+
+/*Buttons + et -*/
+.vtt #chat-log .message .card-buttons button { 
+    margin: 0 40px;  
+    line-height: 3px;
+}
+.vtt #chat-log .message .card-buttons button[data-action="shiftUp"]{
+visibility: hidden;
+}
+
+.vtt #chat-log .message .card-buttons button[data-action="shiftUp"]:before {
+	content: "+";
+	font-size: 15px;
+	visibility:visible;
+	background: darkorchid;
+	color : white;
+    border: 1px solid black;
+	padding: 1px 10px 5px;
+	text-align: center;	
+}
+.vtt #chat-log .message .card-buttons button[data-action="shiftUp"]:hover::before {	
+	box-shadow: 0px 0px 5px darkblue;
+}
+.vtt #chat-log .message .card-buttons button[data-action="shiftDown"]{
+visibility: hidden;
+}
+
+
+.vtt #chat-log .message .card-buttons button[data-action="shiftDown"]:before {
+	content: "-";
+font-size: 15px;	
+	visibility:visible;
+	background: darkorchid;
+color : white;
+    border: 1px solid black;
+	padding: 1px 10px 5px;
+	text-align: center;		
+}
+.vtt #chat-log .message .card-buttons button[data-action="shiftDown"]:hover::before {	
+	box-shadow: 0px 0px 5px darkblue;
+}
+
+.directory .directory-header .header-search input {
+   
+    background: white;
+}
+.pbta.actor.sheet
+{	   background-color: white;
+    font-family: delius-regular;
+
+	}
+.pbta.sheet .sheet-resources .cell--ongoing input, .pbta.sheet .sheet-resources .cell--forward input, .pbta.sheet .sheet-resources .cell--hold input, .pbta.sheet .sheet-resources .cell--roll-formula input {
+	border: none;
+	}
+.pbta.actor .window-content {
+background: linear-gradient(180deg, hsla(0, 100%, 5%, 1) 0%, hsla(240, 100%, 27%, 1) 1%, hsla(275, 64%, 46%, 1) 3%, hsla(0, 0%, 94%, 1) 4%);
+background-attachment: local;
+}
+
+.pbta.sheet .sheet-header input, .pbta.sheet .sheet-header select.charplaybook {
+	    font-family: playball-regular;
+    font-size: 25px;
+	}
+/* Text */
+.pbta.actor.sheet .cell__title
+{
+   font-family: playball-regular;
+	font-size: 25px;
+	color: #170000;
+}
+
+.pbta.actor.sheet label
+{
+    font-family: delius-regular;
+	font-size: large;
+}
+.pbta.actor.sheet .stat .cell__title
+{
+    font-family: playball-regular;
+    font-weight: normal;
+	color:#170000;
+
+}
+.pbta.sheet .sheet-attributes .cell--stats .stat .cell__title {
+		color:black;
+}
+.pbta.sheet .sheet-attributes .cell--stats .stat .stat-toggle {
+	color:black;
+}
+	.pbta.sheet .cell__checkboxes label.flexrow, .pbta.sheet .cell__radio label.flexrow {
+    align-items: start;
+}
+
+
+/* Tabs */
+.pbta.actor.sheet .tabs
+{
+    border-bottom: none;
+}
+.pbta.actor.sheet .tabs .item
+{
+    opacity: 1;
+background-color: darkorchid;
+color: white;
+    font-family: delius-regular;
+	   box-shadow: 0px 0px 3px 3px black;
+    border: none;
+}
+.pbta.actor.sheet .tabs .item:hover{
+	
+	box-shadow: 0px 0px 5px 5px white;
+	}
+.pbta.actor.sheet .tabs .item.active
+{
+    opacity: 1;
+background-color: #170000;
+    font-family: delius-regular;
+	box-shadow: -4px 5px 10px 1px rgba(0,0,139,0.9), 0px 0px 7px 3px rgba(153,50,204,0.9);
+    border: none;
+	color: white;
+}
+
+/* Image */
+.pbta.actor.sheet img
+{
+    border: none;
+	box-shadow: -4px 5px 10px 1px rgba(0,0,139,0.9), 0px 0px 7px 3px rgba(153,50,204,0.9);
+}
+.profile-img {
+object-fit:cover;
+position:relative;
+transition:transform .3s ease-in-out,z-index .3s;
+width:200px;
+z-index:3
+}
+.profile-img:hover {
+transform:scale(3) translate(40px,35px);
+z-index:10
+}
+/* Checkboxes and Radio */
+.pbta.actor.sheet input[type="checkbox"]:checked, input[type="radio"]:checked 
+{
+    accent-color: #170000;
+    -webkit-filter: grayscale(0%);
+}
+
+.pbta.sheet .cell--moves .item-icon,.pbta.sheet .cell--basic-moves .item-icon,.pbta.sheet .cell--starting-moves .item-icon,.pbta.sheet .cell--advanced-moves .item-icon,.pbta.sheet .cell--special-moves .item-icon,.pbta.sheet .cell--other-moves .item-icon,.pbta.sheet .cell--equipment .item-icon,.pbta.sheet .cell--spells .item-icon {
+background-color:transparent
+}
+
+.pbta.sheet .cell--moves .item-showMove .showable,.pbta.sheet .cell--moves .item-avatar .showable,.pbta.sheet .cell--basic-moves .item-showMove .showable,.pbta.sheet .cell--basic-moves .item-avatar .showable,.pbta.sheet .cell--starting-moves .item-showMove .showable,.pbta.sheet .cell--starting-moves .item-avatar .showable,.pbta.sheet .cell--advanced-moves .item-showMove .showable,.pbta.sheet .cell--advanced-moves .item-avatar .showable,.pbta.sheet .cell--special-moves .item-showMove .showable,.pbta.sheet .cell--special-moves .item-avatar .showable,.pbta.sheet .cell--other-moves .item-showMove .showable,.pbta.sheet .cell--other-moves .item-avatar .showable,.pbta.sheet .cell--equipment .item-showMove .showable,.pbta.sheet .cell--equipment .item-avatar .showable,.pbta.sheet .cell--spells .item-showMove .showable,.pbta.sheet .cell--spells .item-avatar .showable {
+background:none;
+}
+
+.pbta.sheet .cell--moves .item-label, .pbta.sheet .cell--basic-moves .item-label, .pbta.sheet .cell--starting-moves .item-label, .pbta.sheet .cell--advanced-moves .item-label, .pbta.sheet .cell--special-moves .item-label, .pbta.sheet .cell--other-moves .item-label, .pbta.sheet .cell--equipment .item-label, .pbta.sheet .cell--spells .item-label {
+    border-left: 2px solid #170000;
+	color: #170000;
+    padding-left: 4px;
+	font-size:15px;
+}
+
+.pbta.sheet .cell--moves .item-description.expanded, .pbta.sheet .cell--basic-moves .item-description.expanded, .pbta.sheet .cell--starting-moves .item-description.expanded, .pbta.sheet .cell--advanced-moves .item-description.expanded, .pbta.sheet .cell--special-moves .item-description.expanded, .pbta.sheet .cell--other-moves .item-description.expanded, .pbta.sheet .cell--equipment .item-description.expanded, .pbta.sheet .cell--spells .item-description.expanded {
+    display: block;
+	font-family: delius-regular;
+	font-size: 15px;
+	border-left: 2px solid #170000;
+    padding: 1em;
+	
+}
+.pbta.sheet .item-name
+{
+    color: black;
+}
+
+
+
+.pbta.sheet .sheet-wrapper .editor-content {
+    background : none;
+	font-size: 15px;
+}
+
+.pbta.actor.sheet label {
+    font-family: playball-regular;
+    font-size: 25px;
+}
+
+
+.pbta.sheet .cell--moves .item-description .result, .pbta.sheet .cell--basic-moves .item-description .result, .pbta.sheet .cell--starting-moves .item-description .result, .pbta.sheet .cell--advanced-moves .item-description .result, .pbta.sheet .cell--special-moves .item-description .result, .pbta.sheet .cell--other-moves .item-description .result, .pbta.sheet .cell--equipment .item-description .result, .pbta.sheet .cell--spells .item-description .result {
+    border-top: 1px solid rgba(255, 255, 255, .05);
+    padding-top: 6px;
+}
+.pbta.sheet .cell__checkboxes label.flexrow:has(.attr-list), .pbta.sheet .cell__radio label.flexrow:has(.attr-list) {
+    flex-wrap: nowrap;
+	font-family: delius-regular;
+    font-size: 15px;
+
+}
+
+
+.pbta.sheet label, .pbta.sheet h1, .pbta.sheet h2 {
+    font-family: delius-regular;
+    font-weight: normal;
+	font-size: large;
+}
+.pbta.sheet .cell--moves .item-showMove .showable, .pbta.sheet .cell--moves .item-avatar .showable, .pbta.sheet .cell--basic-moves .item-showMove .showable, .pbta.sheet .cell--basic-moves .item-avatar .showable, .pbta.sheet .cell--starting-moves .item-showMove .showable, .pbta.sheet .cell--starting-moves .item-avatar .showable, .pbta.sheet .cell--advanced-moves .item-showMove .showable, .pbta.sheet .cell--advanced-moves .item-avatar .showable, .pbta.sheet .cell--special-moves .item-showMove .showable, .pbta.sheet .cell--special-moves .item-avatar .showable, .pbta.sheet .cell--other-moves .item-showMove .showable, .pbta.sheet .cell--other-moves .item-avatar .showable, .pbta.sheet .cell--equipment .item-showMove .showable, .pbta.sheet .cell--equipment .item-avatar .showable, .pbta.sheet .cell--spells .item-showMove .showable, .pbta.sheet .cell--spells .item-avatar .showable {
+
+   width: 60%;
+    height: 60%;
+    color: #170000;
+    background: transparent;
+
+}
+
+
+	
+/*/ journal /*/
+.sheet.journal-entry .journal-header .title {
+	font-family: playball-regular;
+	font-size : 25px;
+	}
+.sheet.journal-entry .pages-list .directory-item:not(.active) + .active {
+    border-top: 1px solid white;
+}
+.sheet.journal-entry .pages-list .page-heading {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    border: none;
+    font-size: var(--font-size-14);
+	color:white;
+}
+.sheet.journal-entry .pages-list .directory-item {
+    line-height: 32px;
+    border-top: 1px solid #000000;
+    border-bottom: 1px black;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+	color:white;
+	}
+.sheet.journal-entry .journal-entry-content {
+	font-family: delius-regular;
+	font-size: 15px;
+ }
+ .sheet.journal-entry .journal-sidebar {    
+	background: none;
+background-image: linear-gradient( 109.6deg,  rgba(112,246,255,0.33) 11.2%, rgba(221,108,241,0.26) 42%, rgba(229,106,253,0.71) 71.5%, rgba(123,183,253,1) 100.2% );
+	color : black;
+	font-family: playball-regular ;
+	font-size: 15px;
+  }
+.sheet.journal-entry .pages-list .page-heading .page-title {
+	    font-size: 25px;
+		}
+.sheet.journal-entry .pages-list .heading-link {
+	font-family: delius-regular;
+	font-size: 15px;
+	}
+/*/ Titres /*/
+.journal-sheet h1, .editor-content h1 {
+	font-family: playball-regular ;
+	text-decoration: underline;
+	text-decoration-style: double;
+	color: #170000;
+	text-align: center;	
+	border-bottom: none;
+	font-size: 30px;
+    padding-bottom: 5px;
+}
+.journal-sheet h2, .editor-content h2 {
+	font-family: playball-regular ;
+	text-shadow: #c90076 1px 0 10px;
+	color:#170000;
+	border-bottom:none;
+	font-size: 26px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+
+}
+.journal-sheet h3, .editor-content h3 {
+	font-family: playball-regular;
+	color:#170000;
+	border-bottom:none;
+	font-size: 22px;
+    padding-bottom: 5px;
+}
+
+.journal-sheet h4:not(.window-title), .editor-content h4 {
+	font-family: delius-regular;
+	color:#170000;
+	border-bottom:none;
+	font-size: 17px;
+    padding-bottom: 5px;
+}
+.journal-sheet h5, .editor-content h5 {
+	font-family: delius-regular;
+	color:#170000;
+	font-size: 17px;
+	border-bottom:none;
+    padding-bottom: 5px;
+}
+/*/ Lien et lien-titre /*/
+a.content-link, a.inline-roll {
+	background:none;
+		text-decoration: 2px underline #f0768b;
+	padding: 0px;
+    border: none;
+}
+.journal-sheet a.content-link i, .journal-sheet a.inline-roll i, .editor-content a.content-link i, .editor-content a.inline-roll i {
+	size: 1px;
+	font-size : 1px;
+	visibility:hidden;
+	
+	/*/ Séparateur /*/
+.journal-sheet hr, .editor-content hr {
+    text-align: center;
+    height: 0px;
+    border-image: linear-gradient(to right, transparent, black, transparent) 1;
+    margin: 30px 10px;
+    overflow: visible;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+    -o-box-sizing: content-box;
+    box-sizing: content-box;
+    border-width: 2px;
+}
+.journal-sheet hr::after, .editor-content hr::after {
+    color: white;
+    
+}
+
+
+/*/ Paragraphe /*/
+.journal-entry-content{
+color : white ;}
+.journal-sheet p {
+	color:black;
+	font-family:facultyglyphic-regular;;
+	font-size: 3em;
+	text-align:justify;
+	line-height: 1.15;
+	
+}
+.editor-content p {
+	color:black;
+	font-family:facultyglyphic-regular;;
+	font-size: 2em;
+	text-align:justify;
+	line-height: 1.15 !important;
+	}
+
+/*/ Liste (li) /*/
+.journal-sheet ul {
+	font-family:poppins-regular;
+	font-size: 2em;
+		text-align:justify;
+	}
+.editor-content ul {
+	font-family:poppins-regular;
+	font-size: 2em;
+	text-align:justify;
+	
+}
+
+.journal-sheet ul, .editor-content ul { list-style: none;} {
+}
+.journal-sheet li, .editor-content li { position: relative;} {
+}
+.journal-sheet li:not(li.heading.h2, li.heading.h3, li.heading.h4), .editor-content li {
+	padding-left:20px;
+}
+
+.journal-sheet ul li li::marker, .editor-content ul li li::marker {
+    position: absolute;
+    left: -21px;
+    top: 2px;
+    vertical-align: middle;
+    display: inline-block;
+    content: '•';
+}
+/*/ Correction Prosemirror (li) /*/
+.prosemirror menu li {
+	padding-left:0px !important;
+}
+.prosemirror menu .pm-dropdown li {
+	list-style: none !important;
+	color:antiquewhite !important;
+	font-family:none !important;
+	font-size:none !important;
+	text-align:none !important;
+	margin-bottom:none !important;
+	padding-left:none !important;
+}
+.prosemirror menu .pm-dropdown li::before {
+	display:none;
+	margin-bottom:none !important;
+	padding-left:none !important;
+}
+.prosemirror menu .pm-dropdown ul li {
+	margin-bottom:none !important;
+	padding-left:none !important;
+}
+

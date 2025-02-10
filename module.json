@@ -1,0 +1,71 @@
+{
+  "id": "pasion-de-las-pasiones-vf",
+  "title": "Pasión de las Pasiones VF",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12"
+  },
+  "authors": [
+    {
+      "name": "Chibi",
+      "flags": {}
+    }
+  ],
+  "esmodules": [
+    "pasiondelaspasiones.js"
+  ],
+  "styles": [
+    "styles/pasiondelaspasiones.css"
+  ],
+  "packs": [
+    {
+      "name": "aides-de-jeu",
+      "label": "Aides de jeu",
+      "path": "packs/aides-de-jeu",
+      "type": "JournalEntry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "pbta",
+      "flags": {}
+    },
+    {
+      "name": "manoeuvres-de-base-et-secondaires",
+      "label": "Manœuvres de base et secondaires",
+      "path": "packs/manoeuvres-de-base-et-secondaires",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "pbta",
+      "flags": {}
+    },
+    {
+      "name": "livrets",
+      "label": "Livrets",
+      "path": "packs/livrets",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "pbta",
+      "flags": {}
+    },
+    {
+      "name": "cadres-de-jeu",
+      "label": "Cadres de jeu",
+      "path": "packs/cadres-de-jeu",
+      "type": "Actor",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "pbta",
+      "flags": {}
+    }
+  ]
+}
