@@ -67,6 +67,7 @@ Il est nécessaire d'avoir installé le système [Powered by the Apocalypse d'As
 **Contenu** : Module fanmade. Les textes sont repris de *Pasión de las Pasiones*, traduit et édité par [Khelren](https://khelren.itch.io/) avec son accord. Vous pouvez acheter Pasión de las Pasiones ici : https://khelren.itch.io/pasion
 
 **Icones** trouvées sur freepik.
+**Images** www.pexels.com
 
 &nbsp;
 
